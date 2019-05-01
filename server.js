@@ -51,3 +51,19 @@ app.get("/api/reservation", function(req, res) {
 app.get("/api/waitlist", function(req, res) {
   res.json(waitlist);
 });
+
+// post route for adding data user enter
+
+app.post("/api/reserve", function(req, res) {
+  var reqbody = req.body();
+
+  reqbody.routeName = newcharacter.name.replace(/\s+/g, "").toLowerCase();
+
+  if (reservation.length > 5) {
+    waitlist.push(reqbody);
+    res.json(true);
+  } else {
+    reservation.push(reqbody);
+    res.json(false);
+  }
+});
