@@ -1,4 +1,5 @@
 var express = require("express");
+var path = require("path");
 var port = process.env.port || 3000;
 
 var app = express();
@@ -29,6 +30,17 @@ var waitlist = [
     email: "email@email"
   }
 ];
+
+// routes for frontend
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "home.html"));
+});
+app.get("/tables", (req, res) => {
+  res.sendFile(path.join(__dirname, "tables.html"));
+});
+app.get("/reserve", (req, res) => {
+  res.sendFile(path.join(__dirname, "reserve.html"));
+});
 
 // routes to display data for both arrays in form of json
 
