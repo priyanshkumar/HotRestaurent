@@ -1,0 +1,23 @@
+{
+  "name": "hotrestaurent",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/priyanshkumar/HotRestaurent.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/priyanshkumar/HotRestaurent/issues"
+  },
+  "homepage": "https://github.com/priyanshkumar/HotRestaurent#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
