@@ -6,6 +6,7 @@ var app = express();
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use("/", express.static(path.join(__dirname, "")));
 
 app.listen(port, function() {
   console.log(`server running on port ${port}`);
