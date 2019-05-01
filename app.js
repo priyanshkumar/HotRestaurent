@@ -2,7 +2,6 @@ function getReserve() {
   $.ajax({
     url: "/api/reservation"
   }).then(data => {
-    console.log(data);
     var tables = $("#reservations");
     data.forEach((reserve, i) => {
       var table = $("<div>");
@@ -22,7 +21,6 @@ function getWaitlist() {
   $.ajax({
     url: "/api/waitlist"
   }).then(data => {
-    console.log(data);
     var tables = $("#wait-list");
     data.forEach((reserve, i) => {
       var table = $("<div>");
